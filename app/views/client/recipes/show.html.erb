@@ -1,0 +1,18 @@
+<a href="/client/recipes">MORE CHUM</a>
+
+<h2><%= @recipe["title"] %></h2>
+<h3>Chef: <%= @recipe["chef"] %></h3>
+<h5>Prep Time: <%= @recipe["formatted"]["prep_time"] %></h5>
+
+ <ul>
+<% @recipe["formatted"]["ingredients"].each do |ingredient| %>
+    <li><%= ingredient %></li>
+<% end %>
+ </ul>
+
+ <ol>
+<% @recipe["formatted"]["directions"].each do |direction| %>
+    <li><%= direction %></li>
+<% end %>
+</ol>
+
